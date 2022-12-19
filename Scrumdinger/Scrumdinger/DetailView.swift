@@ -69,7 +69,7 @@ struct DetailView: View {
             }
         }
         .sheet(isPresented: $isPresentingEditView) {
-            NavigationStack {
+            NavigationView {
                 DetailEditView(data: $data)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
@@ -95,7 +95,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             DetailView(scrum: .constant(DailyScrum.sampleData[0]))
         }
     }

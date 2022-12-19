@@ -33,7 +33,7 @@ struct ScrumsView: View {
             .accessibilityLabel("New Scrum")
         }
         .sheet(isPresented: $isPresentingNewScrumView) {
-            NavigationStack {
+            NavigationView {
                 DetailEditView(data: $newScrumData)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
