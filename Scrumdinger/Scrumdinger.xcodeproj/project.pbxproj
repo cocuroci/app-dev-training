@@ -28,6 +28,8 @@
 		65DC45E12950A95B009B0839 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 65DC45E02950A95B009B0839 /* ding.wav */; };
 		65DC45E32950ADA4009B0839 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC45E22950ADA4009B0839 /* History.swift */; };
 		65DC45E52950B0B6009B0839 /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC45E42950B0B6009B0839 /* ScrumStore.swift */; };
+		65DC45E72950EC43009B0839 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC45E62950EC43009B0839 /* ErrorWrapper.swift */; };
+		65DC45E92950EC95009B0839 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC45E82950EC95009B0839 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		65DC45E02950A95B009B0839 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
 		65DC45E22950ADA4009B0839 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		65DC45E42950B0B6009B0839 /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
+		65DC45E62950EC43009B0839 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		65DC45E82950EC95009B0839 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				6504758E2947B9AB00EAF289 /* Models */,
 				650475932947BC4800EAF289 /* CardView.swift */,
 				650475972948A9E900EAF289 /* ScrumsView.swift */,
+				65DC45E82950EC95009B0839 /* ErrorView.swift */,
 				65DC45CD294C90D9009B0839 /* DetailView.swift */,
 				65DC45CF294CAC3C009B0839 /* DetailEditView.swift */,
 				65DC45D1294CE9C2009B0839 /* ThemeView.swift */,
@@ -122,6 +127,7 @@
 				65DC45DD2950A80C009B0839 /* AVPlayer+Ding.swift */,
 				65DC45E22950ADA4009B0839 /* History.swift */,
 				65DC45E42950B0B6009B0839 /* ScrumStore.swift */,
+				65DC45E62950EC43009B0839 /* ErrorWrapper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,10 +221,12 @@
 				65DC45CE294C90D9009B0839 /* DetailView.swift in Sources */,
 				65DC45D629509FA5009B0839 /* MeetingHeaderView.swift in Sources */,
 				65DC45D0294CAC3C009B0839 /* DetailEditView.swift in Sources */,
+				65DC45E72950EC43009B0839 /* ErrorWrapper.swift in Sources */,
 				650475962948A47200EAF289 /* TrailingIconLabelStyle.swift in Sources */,
 				650475902947B9C500EAF289 /* Theme.swift in Sources */,
 				650475982948A9E900EAF289 /* ScrumsView.swift in Sources */,
 				650475832947B3E900EAF289 /* MeetingView.swift in Sources */,
+				65DC45E92950EC95009B0839 /* ErrorView.swift in Sources */,
 				650475812947B3E900EAF289 /* ScrumdingerApp.swift in Sources */,
 				65DC45D2294CE9C2009B0839 /* ThemeView.swift in Sources */,
 				650475942947BC4800EAF289 /* CardView.swift in Sources */,
