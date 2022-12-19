@@ -13,6 +13,7 @@ struct DailyScrum: Hashable, Identifiable {
     var attendees: [Attendee]
     var lengthInMinutes: Int
     var theme: Theme
+    var history: [History] = []
 
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
@@ -20,6 +21,14 @@ struct DailyScrum: Hashable, Identifiable {
         self.attendees = attendees.map { .init(name: $0) }
         self.lengthInMinutes = lengthInMinutes
         self.theme = theme
+    }
+
+    init(data: Data) {
+        id = UUID()
+        title = data.title
+        attendees = data.attendees
+        lengthInMinutes = Int(data.lengthInMinutes)
+        theme = data.theme
     }
 }
 

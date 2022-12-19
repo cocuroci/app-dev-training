@@ -26,6 +26,7 @@
 		65DC45DC2950A47B009B0839 /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC45DB2950A47B009B0839 /* MeetingFooterView.swift */; };
 		65DC45DE2950A80C009B0839 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC45DD2950A80C009B0839 /* AVPlayer+Ding.swift */; };
 		65DC45E12950A95B009B0839 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 65DC45E02950A95B009B0839 /* ding.wav */; };
+		65DC45E32950ADA4009B0839 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC45E22950ADA4009B0839 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		65DC45DB2950A47B009B0839 /* MeetingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingFooterView.swift; sourceTree = "<group>"; };
 		65DC45DD2950A80C009B0839 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		65DC45E02950A95B009B0839 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
+		65DC45E22950ADA4009B0839 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				650475912947BA7E00EAF289 /* DailyScrum.swift */,
 				65DC45D92950A2C4009B0839 /* ScrumTimer.swift */,
 				65DC45DD2950A80C009B0839 /* AVPlayer+Ding.swift */,
+				65DC45E22950ADA4009B0839 /* History.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DC45E32950ADA4009B0839 /* History.swift in Sources */,
 				65DC45D4294CEABA009B0839 /* ThemePicker.swift in Sources */,
 				65DC45D82950A198009B0839 /* ScrumProgressViewStyle.swift in Sources */,
 				65DC45DC2950A47B009B0839 /* MeetingFooterView.swift in Sources */,
