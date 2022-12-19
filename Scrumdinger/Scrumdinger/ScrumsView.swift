@@ -16,8 +16,8 @@ struct ScrumsView: View {
 
     var body: some View {
         List {
-            ForEach(scrums) { scrum in
-                NavigationLink(value: scrum) {
+            ForEach($scrums) { $scrum in
+                NavigationLink(destination: DetailView(scrum: $scrum)) {
                     CardView(scrum: scrum)
                 }
                 .listRowBackground(scrum.theme.mainColor)
@@ -51,32 +51,15 @@ struct ScrumsView: View {
                     }
             }
         }
-        .navigationDestination(for: DailyScrum.self) { scrum in
-            DetailView(scrum: binding(for: scrum))
-        }
         .onChange(of: scenePhase) { phase in
             if phase == .inactive { saveAction() }
-        }
-    }
-
-    private func binding(for scrum: DailyScrum) -> Binding<DailyScrum> {
-        Binding {
-            guard let scrumIndex = scrums.firstIndex(where: { $0.id == scrum.id }) else {
-                fatalError("Can't find scrum in array")
-            }
-            return scrums[scrumIndex]
-        } set: { value in
-            guard let scrumIndex = scrums.firstIndex(where: { $0.id == scrum.id }) else {
-                fatalError("Can't find scrum in array")
-            }
-            return scrums[scrumIndex] = value
         }
     }
 }
 
 struct ScrumsView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             ScrumsView(scrums: .constant(DailyScrum.sampleData), saveAction: {})
         }
     }
