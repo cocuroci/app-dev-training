@@ -10,14 +10,19 @@ import SwiftUI
 struct DetailView: View {
     @Binding var scrum: DailyScrum
     @State private var isPresentingEditView = false
+    @State private var isPresentingMeetingView = false
     @State private var data = DailyScrum.Data()
 
     var body: some View {
         List {
             Section("Meeting Info") {
-                Label("Start meeting", systemImage: "timer")
-                    .font(.headline)
-                    .foregroundColor(.accentColor)
+                Button(action: {
+                    isPresentingMeetingView.toggle()
+                }) {
+                    Label("Start meeting", systemImage: "timer")
+                        .font(.headline)
+                        .foregroundColor(.accentColor)
+                }
                 HStack {
                     Label("Length", systemImage: "clock")
                     Spacer()
@@ -68,6 +73,9 @@ struct DetailView: View {
                     }
                     .navigationTitle(scrum.title)
             }
+        }
+        .sheet(isPresented: $isPresentingMeetingView) {
+            MeetingView(scrum: $scrum)
         }
     }
 }
