@@ -7,11 +7,21 @@
 
 import Foundation
 
-struct Reminder {
+struct Reminder: Identifiable {
+    var id = UUID().uuidString
     let title: String
     let dueDate: Date
     var notes: String? = nil
     var isComplete = false
+}
+
+extension Array where Element == Reminder {
+    func indexOfReminder(with id: Reminder.ID) -> Index {
+        guard let index = firstIndex(where: { $0.id == id }) else {
+            fatalError()
+        }
+        return index
+    }
 }
 
 #if DEBUG
