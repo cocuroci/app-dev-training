@@ -78,7 +78,7 @@ extension ReminderListViewController {
         return .init(customView: button, placement: .leading(displayed: .always))
     }
 
-    private func reminder(for id: Reminder.ID) -> Reminder {
+    func reminder(for id: Reminder.ID) -> Reminder {
         let index = reminders.indexOfReminder(with: id)
         return reminders[index]
     }
