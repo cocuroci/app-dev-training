@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Reminder: Identifiable {
+struct Reminder: Equatable, Identifiable {
     var id = UUID().uuidString
-    let title: String
-    let dueDate: Date
+    var title: String
+    var dueDate: Date
     var notes: String? = nil
     var isComplete = false
 }
