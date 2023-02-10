@@ -12,7 +12,7 @@ extension ReminderListViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Reminder.ID>
 
     var reminderCompletedValue: String {
-            NSLocalizedString("Completed", comment: "Reminder completed value")
+        NSLocalizedString("Completed", comment: "Reminder completed value")
     }
 
     var reminderNotCompletedValue: String {
@@ -58,6 +58,25 @@ extension ReminderListViewController {
         updateSnapshot(reloading: [id])
     }
 
+    func reminder(for id: Reminder.ID) -> Reminder {
+        let index = reminders.indexOfReminder(with: id)
+        return reminders[index]
+    }
+
+    func update(_ reminder: Reminder, with id: Reminder.ID) {
+        let index = reminders.indexOfReminder(with: id)
+        reminders[index] = reminder
+    }
+
+    func add(_ reminder: Reminder) {
+        reminders.append(reminder)
+    }
+
+    func delete(reminder withID: Reminder.ID) {
+        let index = reminders.indexOfReminder(with: withID)
+        reminders.remove(at: index)
+    }
+
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
         let name = NSLocalizedString("Toggle completion", comment: "Reminder done button accessibility label")
         let action = UIAccessibilityCustomAction(name: name, actionHandler: { [weak self] action in
@@ -76,15 +95,5 @@ extension ReminderListViewController {
         button.id = reminder.id
         button.setImage(image, for: .normal)
         return .init(customView: button, placement: .leading(displayed: .always))
-    }
-
-    func reminder(for id: Reminder.ID) -> Reminder {
-        let index = reminders.indexOfReminder(with: id)
-        return reminders[index]
-    }
-
-    func update(_ reminder: Reminder, with id: Reminder.ID) {
-        let index = reminders.indexOfReminder(with: id)
-        reminders[index] = reminder
     }
 }
